@@ -1,0 +1,22 @@
+h1 {
+    color: teal;
+    font-family: Cambria;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.teal {
+    background-color: teal;
+    font-weight: bold;
+    font-family: Cambria;
+    color: white;
+}
+
+.backgrnd {
+    background-color: white;
+}

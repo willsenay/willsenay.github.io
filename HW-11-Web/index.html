@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>IndexPage</title>
+
+  <!-- Bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body style="background-color:lightgray">
+  
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand teal" href="index.html">HW11</a>
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="comparison.html">Comparison</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots ▼
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="visualizations/temperature.html">Max Temperature</a></li>
+                <li><a class="dropdown-item" href="visualizations/humidity.html">Humidity</a></li>
+                <li><a class="dropdown-item" href="visualizations/cloudiness.html">Cloudiness</a></li>
+                <li><a class="dropdown-item" href="visualizations/wind_speed.html">Wind Speed</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- end navigation bar -->
+  
+<!--
+
+    Do I know what I'm doing?
+    
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▄▄███░░░░░
+░░▄▄░░░░░░░░░░░░░░░░░░░░░░░░░███████░░░░
+░░███▄░░░░░░░░░░░░░░░░░░░░░▄█████▀░█░░░░
+░░▀█████▄▄▄▄▀▀▀▀▀▀▀▀░▄▄▄▄▄███▀▀░▀███░░░░
+░░░░███▀▀░░░░░░░░░░░░░░▀▀▀███░░░░██▀░░░░
+░░░░██░░░░░░▄░░░░░░░░░░░░░░░▀▀▄▄███░░░░░
+░░░░▄█▄▄████▀█░█▄██▄▄░░░░░░░░░████▀░░░░░
+░░░▄████████░░░██████▄▄▄▄░░░░░████░░░░░░
+░░░███░█░▀██░░░▀███░█░░███▄▄░░░░▀█░░░░░░
+░░░████▄███▄▄░░░███▄▄▄█████▀░░░░░██░░░░░
+░░▄████▀▀░▀██▀░░░▀█████████░░░░░░██░░░░░
+░░▀███░░░▄▄▀▀▀▄▄░░░░▀██████░░░░░░░█░░░░░
+░░░███░░█░░░░░░░▀░░░░▀███▀░░░░░░░░█░░░░░
+░░░████▄▀░░░░░░░░▀░░░████▄░░░░░░░░░█░░░░
+░░░██████▄░░░░░░░░░▀▀████▀░░░░░░░░░█░░░░
+░░▄█████████▀▀▀▀░░░░░░░░░░░░░░░░░░░▀█░░░
+░░███████████▄▄▄▄░░░░░░░░░░░░░░░░░░░█▄░░
+░░████████▀▀▀▀▀▀░░░░░░░░░░░░░░░░░░░░░█▄░
+░░████████▄▄░░░░░░░░░░░░░░░░░░░░░░░░░░█░
+░▄███████▄▄░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+░▀▀▀▀▀▀▀▀▀█▀▀▀░░░░░░░░░░░░░░░░░░░░░░░░░█
+░░██░░░░██░░▄▄█████▄▄░░██████▄░███████░░
+░░███▄░░██░▄██▀░░░▀██▄░██░░░▀████░░░░░░░
+░░█████░█████░░░░░░░█████░░▄▄████▄▄▄▄▄░░
+░░██░▀████▀██░░░░░░░██▀██████▀░██▀▀▀▀▀░░
+░░██░░░███░▀██▄▄▄▄▄██▀░██░░░░░░██▄▄▄▄▄░░
+░░▀▀░░░░▀▀░░░▀▀███▀▀░░░▀▀░░░░░░▀▀▀▀▀▀▀░░
+-->
+
+    <div class="col-md-7 backgrnd">
+      <div class="row">
+        <h1 class="text-center">Summary: Latitude vs. X</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a target="_blank" href="assets/images/Fig1.png">
+            <img class="img-responsive" src="assets/images/Fig1.png" alt="Temperature Map">
+          </a>
+        </div>
+        <div class="col-md-6">
+          <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble as dataset on over 500 cities.</p>
+          <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+        </div>
+      </div> 
+    </div> <!-- end first column -->  
+    <div class="col-md-1">
+
+    </div> <!-- end break column -->
+    <div class="col-md-4 backgrnd">
+      <div class="row">
+        <h1 class="text-center">Visualizations</h1>
+      </div>
+
+      <div class='row'>
+        <a href="visualizations/temperature.html">
+          <img class="img-responsive" src="assets/images/Fig1.png" alt="Temperature Map">
+        </a>
+      </div>
+
+      <div class='row'>
+        <a href="visualizations/humidity.html">
+          <img class="img-responsive" src="assets/images/Fig2.png" alt="Humidity Map">
+        </a>
+      </div>
+
+      <div class='row'>
+        <a href="visualizations/cloudiness.html">
+          <img class="img-responsive" src="assets/images/Fig3.png" alt="Cloudiness Map">
+        </a>
+      </div>
+
+      <div class='row'>
+        <a href="visualizations/wind_speed.html">
+          <img class="img-responsive" src="assets/images/Fig4.png" alt="Wind Speed Map">
+        </a>
+      </div>
+    </div> <!-- end second column -->
+  </div> <!-- end whole "row" -->
+    
+
+
+</body>
+</html>
